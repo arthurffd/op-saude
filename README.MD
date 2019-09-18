@@ -13,7 +13,7 @@ Last Updates:  <br />
 <br /><br />
 
 ## Arquitetura:
-Este projeto foi idealizado seguindo padrões de arquitetura cloud da Microsoft Azure, conforme imagem a seguir:<br />
+Este projeto foi idealizado seguindo padrões de arquitetura de dados sugeridos pela Microsoft Azure, conforme imagem a seguir:<br /><br />
 ![Data_Architecture_overview](Data_Architecture_overview.jpg?raw=true "GET")
 
 <br /><br />
