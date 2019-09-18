@@ -28,12 +28,12 @@ Acessar a URL: https://portal.azure.com/ <br />
 usuario: softplan@arthurffdyahoocombr.onmicrosoft.com  <br />
 senha: Sapiens2019! <br /><br />
 
-#### Uma vez logado no portal azure, selecione na esquerda "Grupo de Recursos" e selecione "grupo_recurso_01":
-- "arthurffd001" - "Conta de armazenamento": contém os arquivos de originais armazenados em nuvem. Selecione o blobs e acesse "blob-opsaude-01" para visualizar os arquivos. <br /><br />
-- "arthurffd001dlk" - "Data Lake Storage Gen1": contém os arquivos originais armazenados no Data Lake. Selecione Data Explorer para visualizar os arquivos carregados. <br /><br />
-- "arthurffd001dlkanalytics" - "Data Lake Analytics": permite realizar analises e executar scripts em cima dos arquivos do DataLake; <br /><br />
-- "DW-OP-SAUDE-01 (server-arthurfd001/DW-OP-SAUDE-01)" - "SQL data warehouse": Banco de Dados - Data Warehouse com as tabelas finais. Contém os dados do servidor SQL Server. <br /><br />
-- "OP-Saude" - "Data factory (V2)": Data Factory contém o pipeline com todo o fluxo desde carregar o arquivo de origem até armazenar na tabela final de DW. Selecion "Author and Monitor" para visualizar o pipeline. <br /><br />
+#### Uma vez logado no portal azure, selecione no menu da esquerda "Grupo de Recursos" e selecione "grupo_recurso_01":
+- "arthurffd001" - "Conta de armazenamento": contém os arquivos de originais armazenados em nuvem. Selecione "Blobs" e acesse "blob-opsaude-01" para visualizar os arquivos originais. <br /><br />
+- "arthurffd001dlk" - "Data Lake Storage Gen1": contém os arquivos originais que foram processados e carregados no Data Lake. Selecione Data Explorer para visualizar os arquivos carregados. <br /><br />
+- "arthurffd001dlkanalytics" - "Data Lake Analytics": permite realizar análises e executar scripts em cima dos arquivos do DataLake; <br /><br />
+- "DW-OP-SAUDE-01 (server-arthurfd001/DW-OP-SAUDE-01)" - "SQL data warehouse": Banco de Dados - Data Warehouse contendo as tabelas finais (fatos e dimensões) para análises de BI. Contém também os dados do servidor SQL Server. <br /><br />
+- "OP-Saude" - "Data factory (V2)": Data Factory contém o pipeline com todo o fluxo de dados, desde carregar o arquivo de origem até armazenar na tabela final de DW. Selecione "Author and Monitor" para visualizar o pipeline. <br /><br />
 
 
 ### SQL Server (Data warehouse):
