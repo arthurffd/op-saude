@@ -36,12 +36,12 @@ Este projeto foi idealizado seguindo padrões de arquitetura cloud da Microsoft 
 
 <br /><br />
 
-## Relatorios
-### Beneficiarios alta utilização (fraude):
+## Relatórios
+### Beneficiários alta utilização (fraude):
 - Somar custos por beneficiario por periodo (trimestre), reportar os que ultrapassem um certo valor de threshold para investigação, em planos sem co-participação;
 - Grafico de colunas (beneficiario), ordenado por valor decrescente, uma linha indicando qual o valor de threshold. 
 
-### Prestador muitos atendimentos / procedimentos (fraude):
+### Prestadores com excesso de atendimentos / procedimentos (fraude):
 - Somar valores por prestadores, por periodo (mensal), reportar os que ultrapassem um certo valor de threshold para investigação;
 - Grafico de colunas (prestador), ordenado por valor decrescente, uma linha indicando qual o valor de threshold.
 
