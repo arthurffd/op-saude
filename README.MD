@@ -33,7 +33,7 @@ senha: Sapiens2019! <br /><br />
 - "arthurffd001dlk" - "Data Lake Storage Gen1": contém os arquivos originais armazenados no Data Lake. Selecione Data Explorer para visualizar os arquivos carregados. <br /><br />
 - "arthurffd001dlkanalytics" - "Data Lake Analytics": permite realizar analises e executar scripts em cima dos arquivos do DataLake; <br /><br />
 - "DW-OP-SAUDE-01 (server-arthurfd001/DW-OP-SAUDE-01)" - "SQL data warehouse": Banco de Dados - Data Warehouse com as tabelas finais. Contém os dados do servidor SQL Server. <br /><br />
-- "OP-Saude" - "Data factory (V2)": Data Factory contém o pipeline com todo o fluxo desde carregar o arquivo de origem até armazenar na tabela final de DW. <br /><br />
+- "OP-Saude" - "Data factory (V2)": Data Factory contém o pipeline com todo o fluxo desde carregar o arquivo de origem até armazenar na tabela final de DW. Selecion "Author and Monitor" para visualizar o pipeline. <br /><br />
 
 
 ### SQL Server (Data warehouse):
