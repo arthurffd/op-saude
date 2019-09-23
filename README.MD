@@ -69,7 +69,7 @@ senha:  Sapiens2019! <br />
 
 ## Análises
 Na camada de Data Lake é possível realizar análises exploratórias nos arquivos originais carregados. 
-Neste caso, o arquivo DLK_Analysis_Files_001 (Jupyter Notebook em linguagem Python) contém uma análise exploratória simples utilizando a biblioteca Pandas.
+Neste caso, o arquivo DLK_Analysis_Files_001 (Jupyter Notebook e tbm script Python) contém uma análise exploratória simples utilizando a biblioteca Pandas.
 <br /><br />
 
 ## Relatórios
