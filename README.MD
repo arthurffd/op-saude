@@ -65,9 +65,9 @@ senha:  Sapiens2019! <br />
 	- Vidas  (pendente)
 
 <br />
-- Scripts utilizados para criar objetos, permissões do SQL Server:
-	- 01_create_access_objetcs.sql <br />
-	- 02_create_tables.sql  <br />
+- Scripts utilizados para criar objetos, permissões do SQL Server :
+	- 01_create_access_objetcs.sql ; <br />
+	- 02_create_tables.sql ; <br />
 <br /><br />
 ![SQL_SERVER_DB](SQL_SERVER_DB.png?raw=true "GET")
 <br /><br />
@@ -90,9 +90,10 @@ Os dados seriam lidos a partir das tabelas finais do Data WareHouse, porém exis
 - Arquivo Power BI: "beneficiarios_custos.pbix" ou  export em PDF: "beneficiarios_custos.pdf"
 - Somar custos por beneficiario por periodo (trimestre), reportar os que ultrapassem um certo valor de threshold para investigação para investigar fraudes;
 - Grafico de colunas (beneficiario), ordenado por valor decrescente, uma linha indicando qual o valor de threshold (média de custos).
-<br />
-![powerbi_custos.png](powerbi_custos.png?raw=true "GET")
-<br />
+<br /><br />
+![powerbi_custos.png](powerbi_custos.png?raw=true "GET") 
+<br /><br />
+
 ### Prestadores com excesso de atendimentos / procedimentos (pendente):
 - Somar valores por prestadores, por periodo (mensal), reportar os que ultrapassem um certo valor de threshold para investigação de fraude;
 - Grafico de colunas (prestador), ordenado por valor decrescente, uma linha indicando qual o valor de threshold.
