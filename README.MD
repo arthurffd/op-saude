@@ -9,7 +9,7 @@ Customer: Sofplan <br />
 Developer: Arthur Flores Duarte <br />
 <br />
 Created Date: 2019/09/18 <br />
-Last Updates:  <br />
+Last Updates:  2019/09/22 <br />
 <br /><br />
 
 ## Arquitetura:
@@ -32,33 +32,34 @@ senha: Sapiens2019! <br /><br />
 - "arthurffd001" - "Conta de armazenamento": contém os arquivos de originais armazenados em nuvem. Selecione "Blobs" e acesse "blob-opsaude-01" para visualizar os arquivos originais. <br /><br />
 - "arthurffd001dlk" - "Data Lake Storage Gen1": contém os arquivos originais que foram processados e carregados no Data Lake. Selecione Data Explorer para visualizar os arquivos carregados. <br /><br />
 - "arthurffd001dlkanalytics" - "Data Lake Analytics": permite realizar análises e executar scripts em cima dos arquivos do DataLake; <br /><br />
-- "DW-OP-SAUDE-01 (server-arthurfd001/DW-OP-SAUDE-01)" - "SQL data warehouse": Banco de Dados - Data Warehouse contendo as tabelas finais (fatos e dimensões) para análises de BI. Contém também os dados do servidor SQL Server. <br /><br />
+- ~~"DW-OP-SAUDE-01 (server-arthurfd001/DW-OP-SAUDE-01)" - "SQL data warehouse": Banco de Dados - Data Warehouse contendo as tabelas finais (fatos e dimensões) para análises de BI. Contém também os dados do servidor SQL Server.~~ This Data Warehouse was removed from this project, due to the high cost, we will use a normal SQL Server Database.<br /><br />
+- "SQL_DB_arthurffd001" - "SQL Database": Banco de dados SQL Server dentro do Azure cloud. Contém as tabelas finais (fatos e dimensões) para análises de BI
 - "OP-Saude" - "Data factory (V2)": Data Factory contém o pipeline com todo o fluxo de dados, desde carregar o arquivo de origem até armazenar na tabela final de DW. Selecione "Author and Monitor" para visualizar o pipeline. <br /><br />
 
 
 ### SQL Server (Data warehouse):
 DW Database Server:<br />
 servidor: server-arthurfd001.database.windows.net<br />
+database: SQL_DB_arthurffd001 <br />
 usuario: loaderdw001 <br />
 senha:  Sapiens2019! <br />
 
 
 ## Tabelas
 - Tabelas Dimensoes:<br />
-	- Empresa
-	- Prestador
-	- Beneficiario
-	- Consultas
-	- Procedimentos
-	- Diarias
-	- Pacotes
-	
+	- Empresa (carregada)
+	- Prestador (carregada)
+	- Beneficiario (carregada)
+	- Consultas (pendente)
+	- Procedimentos (pendente)
+	- Diarias (pendente)
+	- Pacotes (pendente)
  <br />
  
 - Tabelas Fatos:
-	- Custos
-	- Receitas
-	- Vidas
+	- Custos (carregada)
+	- Receitas (pendente) 
+	- Vidas  (pendente)
 
 <br /><br />
 - Scripts utilizados para criar objetos, permissões do SQL Server - DW:
@@ -70,16 +71,16 @@ senha:  Sapiens2019! <br />
 Na camada de visualização, teriamos os relatórios sugeridos abaixo, a serem criados a no Power BI (pendente).<br />
 Os dados seriam lidos a partir das tabelas finais do Data WareHouse, porém existe também a possibilidade de gerar relatórios com os dados brutos a partir do Data Lake, para ajudar em analises exploratórias.<br />
 
-### Beneficiários alta utilização (fraude):
-- Somar custos por beneficiario por periodo (trimestre), reportar os que ultrapassem um certo valor de threshold para investigação, em planos sem co-participação;
+### Beneficiários alta utilização (relatório gerado):
+- Somar custos por beneficiario por periodo (trimestre), reportar os que ultrapassem um certo valor de threshold para investigação, em planos sem co-participação, para investigar fraudes;
 - Grafico de colunas (beneficiario), ordenado por valor decrescente, uma linha indicando qual o valor de threshold. 
 
-### Prestadores com excesso de atendimentos / procedimentos (fraude):
-- Somar valores por prestadores, por periodo (mensal), reportar os que ultrapassem um certo valor de threshold para investigação;
+### Prestadores com excesso de atendimentos / procedimentos (pendente):
+- Somar valores por prestadores, por periodo (mensal), reportar os que ultrapassem um certo valor de threshold para investigação de fraude;
 - Grafico de colunas (prestador), ordenado por valor decrescente, uma linha indicando qual o valor de threshold.
 
-### Tendencia de Receita por empresas:
-- Analisar tendencia de aumento ou queda da receita por empresa. 
+### Tendencia de Receita por empresas (pendente):
+- Analisar tendencia de aumento ou queda da receita por empresa (trending, predicção simples). 
 - Empresa com queda acentuada devem ser analisadas e ver o motivo da queda, e empresas com aumento possibilidade de melhorar planos ou atenção especial.
 - Grafico de linha de tempo, mostrando as maiores variações de queda e outro mostrando as maiores variações de aumento.
 
