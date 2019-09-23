@@ -129,3 +129,54 @@ CREATE TABLE [dbo].DimPrestador
 )
 WITH (DISTRIBUTION = HASH(COD_PRESTADOR)) 
 go
+
+
+
+create table [dbo].fact_custos_agg (
+CODIGO_BENEFICIARIO          nvarchar(50) not null ,
+COMPETENCIA                  date not null,
+NUM_GUIA                     nvarchar(50),
+DATA_EXECUCAO                date,
+COD_SOLICITANTE              nvarchar(50),
+COD_PREST_EXECUTANTE         nvarchar(50),
+COD_LOCAL_ATENDIMENTO        nvarchar(50),
+CODIGO_SERVICO               nvarchar(50),
+TIPO_SERVICO                 nvarchar(100),
+QUANTIDADE                   int,
+VAL_TOTAL                    decimal(12,2),
+VAL_BASE_PGTO                decimal(12,2),
+VALOR_FATURADO               decimal(12,2)
+); -- partition by date
+
+
+create table [dbo].dim_beneficiarios (
+COD_PESSOA            bigint not null,
+CODIGO_BENEFICIARIO   nvarchar(30) not null,
+COD_BENEF_TITULAR     nvarchar(30), 
+NUM_EMPRESA           bigint, 
+NOME_INTERNO          nvarchar(100),
+NOME_BENEFICIARIO     nvarchar(100), 
+NUM_CPF               nvarchar(14),
+DAT_NASCIMENTO		  date,
+PLANO_REGISTRO        nvarchar(20),
+PLANO_DESCRICAO       nvarchar(100), 
+REGULAMENTADO         nvarchar(50),
+PLANO_COPARTICIPACAO  nvarchar(50),
+LIMIT_MAX_COPART      nvarchar(50),
+PLANO_ACOMODACAO      nvarchar(50),
+PLANO_ABRANGENCIA     nvarchar(50),
+DEPENDENCIA           nvarchar(50),
+DAT_INCLUSAO          date, 
+DAT_EXCLUSAO          date,
+NOME_MAE              nvarchar(100), 
+SEXO                  nvarchar(20),
+TIPO_CONTRATO         nvarchar(30), 
+TIPO_PESSOA_CONTRATO  nvarchar(30), 
+LOGRADOURO            nvarchar(100), 
+BAIRRO                nvarchar(100), 
+MUNICIPIO             nvarchar(100),  
+ESTADO                nvarchar(50),  
+CEP                   nvarchar(20), 
+TIPO_CLIENTE          nvarchar(20), 
+CARTAO_NACIONAL_SAUDE nvarchar(20),
+);
