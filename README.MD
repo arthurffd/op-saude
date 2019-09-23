@@ -48,7 +48,6 @@ database: SQL_DB_arthurffd001 <br />
 usuario: loaderdw001 <br />
 senha:  Sapiens2019! <br />
 
-
 ## Tabelas
 - Tabelas Dimensoes:<br />
 	- Empresa (carregada)
@@ -65,20 +64,28 @@ senha:  Sapiens2019! <br />
 	- Receitas (pendente) 
 	- Vidas  (pendente)
 
-<br /><br />
+<br />
 - Scripts utilizados para criar objetos, permissões do SQL Server - DW:
 	- 01_create_access_objetcs.sql
 	- 02_create_tables.sql
-<br /><br />
+<br />
+![SQL_SERVER_DB](SQL_SERVER_DB.png?raw=true "GET")
 
+<br /><br />
 ## Análises
 Na camada de Data Lake é possível realizar análises exploratórias nos arquivos originais carregados. 
 Neste caso, o arquivo DLK_Analysis_Files_001 (Jupyter Notebook e tbm script Python) contém uma análise exploratória simples utilizando a biblioteca Pandas.
+<br />
+![datalake](datalake.png?raw=true "GET")
+<br />
+![Jupyter_pandas_analysis](Jupyter_pandas_analysis.png?raw=true "GET")
 <br /><br />
 
 ## Relatórios
 Na camada de visualização, teriamos os relatórios sugeridos abaixo, a serem criados a no Power BI (pendente).<br />
 Os dados seriam lidos a partir das tabelas finais do Data WareHouse, porém existe também a possibilidade de gerar relatórios com os dados brutos a partir do Data Lake, para ajudar em analises exploratórias.<br />
+![powerbi_custos.png](powerbi_custos.png?raw=true "GET")
+<br /><br />
 
 ### Beneficiários alta utilização:
 - Arquivo Power BI: "beneficiarios_custos.pbix" ou  export em PDF: "beneficiarios_custos.pdf"
