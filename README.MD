@@ -30,10 +30,10 @@ senha: Sapiens2019! <br /><br />
 
 #### Uma vez logado no portal azure, selecione no menu da esquerda "Grupo de Recursos" e selecione "grupo_recurso_01":
 - "arthurffd001" - "Conta de armazenamento": contém os arquivos de originais armazenados em nuvem. Selecione "Blobs" e acesse "blob-opsaude-01" para visualizar os arquivos originais. <br /><br />
-- "arthurffd001dlk" - "Data Lake Storage Gen1": contém os arquivos originais que foram processados e carregados no Data Lake. Selecione Data Explorer para visualizar os arquivos carregados. <br /><br />
+- "arthurffd001dlk" - "Data Lake Storage Gen1": contém os arquivos originais que foram processados e carregados no Data Lake. Selecione Data Explorer para visualizar os arquivos carregados. É possível realizar análises sobre os arquivos originais carregados, como fizemos com Python utilizando Jupyter Notebook.<br /><br />
 - "arthurffd001dlkanalytics" - "Data Lake Analytics": permite realizar análises e executar scripts em cima dos arquivos do DataLake; <br /><br />
-- ~~"DW-OP-SAUDE-01 (server-arthurfd001/DW-OP-SAUDE-01)" - "SQL data warehouse": Banco de Dados - Data Warehouse contendo as tabelas finais (fatos e dimensões) para análises de BI. Contém também os dados do servidor SQL Server.~~ This Data Warehouse was removed from this project, due to the high cost, we will use a normal SQL Server Database.<br /><br />
-- "SQL_DB_arthurffd001" - "SQL Database": Banco de dados SQL Server dentro do Azure cloud. Contém as tabelas finais (fatos e dimensões) para análises de BI <br />
+- ~~"DW-OP-SAUDE-01 (server-arthurfd001/DW-OP-SAUDE-01)" - "SQL data warehouse": Banco de Dados - Data Warehouse contendo as tabelas finais (fatos e dimensões) para análises de BI. Contém também os dados do servidor SQL Server.~~  O Data Warehouse está pausado no Azure e devido ao alto custo, no lugar iremos utilizar um banco de dados SQL Server do Azure.<br /><br />
+- "SQL_DB_arthurffd001" - "SQL Database": Banco de dados SQL Server dentro do Azure cloud. Contém as tabelas finais (fatos e dimensões) para análises de BI <br /><br />
 - "OP-Saude" - "Data factory (V2)": Data Factory contém o pipeline com todo o fluxo de dados, desde carregar o arquivo de origem até armazenar na tabela final de DW. Selecione "Author and Monitor" para visualizar o pipeline. <br /><br />
 
 
@@ -89,8 +89,8 @@ Os dados seriam lidos a partir das tabelas finais do Data WareHouse, porém exis
 - Analisar tendencia de aumento ou queda da receita por empresa (trending, predicção simples). 
 - Empresa com queda acentuada devem ser analisadas e ver o motivo da queda, e empresas com aumento possibilidade de melhorar planos ou atenção especial.
 - Grafico de linha de tempo, mostrando as maiores variações de queda e outro mostrando as maiores variações de aumento.
-
 <br /><br />
+
 ## Referências:
 https://www.youtube.com/results?search_query=data+factory+power+bi
 
