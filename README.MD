@@ -35,7 +35,7 @@ senha: Sapiens2019! <br /><br />
 - ~~"DW-OP-SAUDE-01 (server-arthurfd001/DW-OP-SAUDE-01)" - "SQL data warehouse": Banco de Dados - Data Warehouse contendo as tabelas finais (fatos e dimensões) para análises de BI. Contém também os dados do servidor SQL Server.~~  O Data Warehouse está pausado no Azure e devido ao alto custo, no lugar iremos utilizar um banco de dados SQL Server do Azure.<br /><br />
 - "SQL_DB_arthurffd001" - "SQL Database": Banco de dados SQL Server dentro do Azure cloud. Contém as tabelas finais (fatos e dimensões) para análises de BI
 <br /><br />
-- "OP-Saude" - "Data factory (V2)": Data Factory contém o pipeline com todo o fluxo de dados, desde carregar o arquivo de origem até armazenar na tabela final de DW. Selecione "Author and Monitor" para visualizar o pipeline. <br />
+- "OP-Saude" - "Data factory (V2)": Data Factory contém o pipeline com todo o fluxo de dados, desde carregar o arquivo de origem até armazenar na tabela final de DW. Selecione "Author and Monitor" para visualizar o pipeline. <br /><br />
 ![data_factory_pipelines](data_factory_pipelines.png?raw=true "GET")<br/><br />
 ![pipeline_executions](pipeline_executions.png?raw=true "GET")<br/><br />
 ![pipeline_detail](pipeline_detail.png?raw=true "GET")
@@ -75,7 +75,7 @@ senha:  Sapiens2019! <br />
 ## Análises
 Na camada de Data Lake é possível realizar análises exploratórias nos arquivos originais carregados. 
 Neste caso, o arquivo DLK_Analysis_Files_001 (Jupyter Notebook e tbm script Python) contém uma análise exploratória simples utilizando a biblioteca Pandas.
-<br />
+<br /><br />
 ![datalake](datalake.png?raw=true "GET")
 <br /><br />
 ![Jupyter_pandas_analysis](Jupyter_pandas_analysis.png?raw=true "GET")
