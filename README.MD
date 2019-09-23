@@ -63,13 +63,13 @@ senha:  Sapiens2019! <br />
 	- Custos (carregada)
 	- Receitas (pendente) 
 	- Vidas  (pendente)
-
 <br />
-- Scripts utilizados para criar objetos, permissões do SQL Server :
-	- 01_create_access_objetcs.sql ; <br />
-	- 02_create_tables.sql ; <br />
+
+- Scripts banco de dados:<br />
+	- 01_create_access_objects
+	- 02_create_tables
 <br /><br />
-![SQL_SERVER_DB](SQL_SERVER_DB.png?raw=true "GET")
+![sql_db](sql_db.png?raw=true "GET")
 <br /><br />
 
 ## Análises
