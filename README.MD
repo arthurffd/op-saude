@@ -36,8 +36,8 @@ senha: Sapiens2019! <br /><br />
 - "SQL_DB_arthurffd001" - "SQL Database": Banco de dados SQL Server dentro do Azure cloud. Contém as tabelas finais (fatos e dimensões) para análises de BI
 <br /><br />
 - "OP-Saude" - "Data factory (V2)": Data Factory contém o pipeline com todo o fluxo de dados, desde carregar o arquivo de origem até armazenar na tabela final de DW. Selecione "Author and Monitor" para visualizar o pipeline. <br />
-![data_factory_pipelines](data_factory_pipelines.png?raw=true "GET")<br/>
-![pipeline_executions](pipeline_executions.png?raw=true "GET")<br/>
+![data_factory_pipelines](data_factory_pipelines.png?raw=true "GET")<br/><br />
+![pipeline_executions](pipeline_executions.png?raw=true "GET")<br/><br />
 ![pipeline_detail](pipeline_detail.png?raw=true "GET")
 <br /><br />
 
@@ -59,39 +59,40 @@ senha:  Sapiens2019! <br />
 	- Pacotes (pendente)
  <br />
  
-- Tabelas Fatos:
+- Tabelas Fatos:<br />
 	- Custos (carregada)
 	- Receitas (pendente) 
 	- Vidas  (pendente)
 
 <br />
-- Scripts utilizados para criar objetos, permissões do SQL Server - DW:
-	- 01_create_access_objetcs.sql
-	- 02_create_tables.sql
-<br />
-![SQL_SERVER_DB](SQL_SERVER_DB.png?raw=true "GET")
-
+- Scripts utilizados para criar objetos, permissões do SQL Server:
+	- 01_create_access_objetcs.sql <br />
+	- 02_create_tables.sql  <br />
 <br /><br />
+![SQL_SERVER_DB](SQL_SERVER_DB.png?raw=true "GET")
+<br /><br />
+
 ## Análises
 Na camada de Data Lake é possível realizar análises exploratórias nos arquivos originais carregados. 
 Neste caso, o arquivo DLK_Analysis_Files_001 (Jupyter Notebook e tbm script Python) contém uma análise exploratória simples utilizando a biblioteca Pandas.
 <br />
 ![datalake](datalake.png?raw=true "GET")
-<br />
+<br /><br />
 ![Jupyter_pandas_analysis](Jupyter_pandas_analysis.png?raw=true "GET")
 <br /><br />
 
 ## Relatórios
 Na camada de visualização, teriamos os relatórios sugeridos abaixo, a serem criados a no Power BI (pendente).<br />
 Os dados seriam lidos a partir das tabelas finais do Data WareHouse, porém existe também a possibilidade de gerar relatórios com os dados brutos a partir do Data Lake, para ajudar em analises exploratórias.<br />
-![powerbi_custos.png](powerbi_custos.png?raw=true "GET")
-<br /><br />
+<br />
 
 ### Beneficiários alta utilização:
 - Arquivo Power BI: "beneficiarios_custos.pbix" ou  export em PDF: "beneficiarios_custos.pdf"
 - Somar custos por beneficiario por periodo (trimestre), reportar os que ultrapassem um certo valor de threshold para investigação para investigar fraudes;
 - Grafico de colunas (beneficiario), ordenado por valor decrescente, uma linha indicando qual o valor de threshold (média de custos).
-
+<br />
+![powerbi_custos.png](powerbi_custos.png?raw=true "GET")
+<br />
 ### Prestadores com excesso de atendimentos / procedimentos (pendente):
 - Somar valores por prestadores, por periodo (mensal), reportar os que ultrapassem um certo valor de threshold para investigação de fraude;
 - Grafico de colunas (prestador), ordenado por valor decrescente, uma linha indicando qual o valor de threshold.
