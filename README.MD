@@ -33,7 +33,7 @@ senha: Sapiens2019! <br /><br />
 - "arthurffd001dlk" - "Data Lake Storage Gen1": contém os arquivos originais que foram processados e carregados no Data Lake. Selecione Data Explorer para visualizar os arquivos carregados. <br /><br />
 - "arthurffd001dlkanalytics" - "Data Lake Analytics": permite realizar análises e executar scripts em cima dos arquivos do DataLake; <br /><br />
 - ~~"DW-OP-SAUDE-01 (server-arthurfd001/DW-OP-SAUDE-01)" - "SQL data warehouse": Banco de Dados - Data Warehouse contendo as tabelas finais (fatos e dimensões) para análises de BI. Contém também os dados do servidor SQL Server.~~ This Data Warehouse was removed from this project, due to the high cost, we will use a normal SQL Server Database.<br /><br />
-- "SQL_DB_arthurffd001" - "SQL Database": Banco de dados SQL Server dentro do Azure cloud. Contém as tabelas finais (fatos e dimensões) para análises de BI
+- "SQL_DB_arthurffd001" - "SQL Database": Banco de dados SQL Server dentro do Azure cloud. Contém as tabelas finais (fatos e dimensões) para análises de BI <br />
 - "OP-Saude" - "Data factory (V2)": Data Factory contém o pipeline com todo o fluxo de dados, desde carregar o arquivo de origem até armazenar na tabela final de DW. Selecione "Author and Monitor" para visualizar o pipeline. <br /><br />
 
 
@@ -67,13 +67,19 @@ senha:  Sapiens2019! <br />
 	- 02_create_tables.sql
 <br /><br />
 
+## Análises
+Na camada de Data Lake é possível realizar análises exploratórias nos arquivos originais carregados. 
+Neste caso, o arquivo DLK_Analysis_Files_001 (Jupyter Notebook em linguagem Python) contém uma análise exploratória simples utilizando a biblioteca Pandas.
+<br /><br />
+
 ## Relatórios
 Na camada de visualização, teriamos os relatórios sugeridos abaixo, a serem criados a no Power BI (pendente).<br />
 Os dados seriam lidos a partir das tabelas finais do Data WareHouse, porém existe também a possibilidade de gerar relatórios com os dados brutos a partir do Data Lake, para ajudar em analises exploratórias.<br />
 
-### Beneficiários alta utilização (relatório gerado):
-- Somar custos por beneficiario por periodo (trimestre), reportar os que ultrapassem um certo valor de threshold para investigação, em planos sem co-participação, para investigar fraudes;
-- Grafico de colunas (beneficiario), ordenado por valor decrescente, uma linha indicando qual o valor de threshold. 
+### Beneficiários alta utilização:
+- Arquivo Power BI: "beneficiarios_custos.pbix" ou  export em PDF: "beneficiarios_custos.pdf"
+- Somar custos por beneficiario por periodo (trimestre), reportar os que ultrapassem um certo valor de threshold para investigação para investigar fraudes;
+- Grafico de colunas (beneficiario), ordenado por valor decrescente, uma linha indicando qual o valor de threshold (média de custos).
 
 ### Prestadores com excesso de atendimentos / procedimentos (pendente):
 - Somar valores por prestadores, por periodo (mensal), reportar os que ultrapassem um certo valor de threshold para investigação de fraude;
