@@ -1,5 +1,5 @@
-# Desafio Tecnico Softplan
-Este é o projeto de desafio ténico da Sofplan 2019.<br />
+# Desafio Tecnico Empresa SPL
+Este é o projeto de desafio ténico da Empresa SPL 2019.<br />
 O desafio consiste em duas etapas, sendo a primeira um desenho arquitetural e a segunda uma atividade de implementação de acordo com a especificação <br />
 
 ## Purpose: 
